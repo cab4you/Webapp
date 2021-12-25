@@ -1,0 +1,144 @@
+<div class="register-form">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-6 rowclass">
+          <label>Owner Name</label>
+          <input type="text" formControlName="ownerName" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.ownerName.errors }" />
+          <div *ngIf="submitted && f.ownerName.errors" class="invalid-feedback">
+            <div *ngIf="f.ownerName.errors.required">Owner Name is required</div>
+          </div>
+        </div>
+        <div class="col-sm-6 rowclass">
+          <label>Address</label>
+          <input type="text" formControlName="address" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.address.errors }" />
+          <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+            <div *ngIf="f.address.errors.required">Address is required</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-6 rowclass">
+          <label>Owner Phone</label>
+          <input type="number" maxlength="10" formControlName="ownerPhone" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.ownerPhone.errors }" />
+          <div *ngIf="submitted && f.ownerPhone.errors" class="invalid-feedback">
+            <div *ngIf="f.ownerPhone.errors.required">Owner Phone is required</div>
+
+          </div>
+        </div>
+        <div class="col-sm-6 rowclass">
+          <label>CabNumber</label>
+          <input type="text" formControlName="cabNumber" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.cabNumber.errors }" />
+          <div *ngIf="submitted && f.cabNumber.errors" class="invalid-feedback">
+            <div *ngIf="f.cabNumber.errors.required">Cab Number is required</div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-6 rowclass">
+          <label>Driver Name</label>
+          <input type="text" formControlName="driverName" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.driverName.errors }" />
+          <div *ngIf="submitted && f.driverName.errors" class="invalid-feedback">
+            <div *ngIf="f.driverName.errors.required">
+              driver Name is required
+            </div>
+    
+          </div>
+        </div>
+         <div class="col-sm-6 rowclass">
+          <label>Driver Phone</label>
+          <input type="number" maxlength="10" formControlName="driverPhone" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.driverPhone.errors }" />
+          <div *ngIf="submitted && f.driverPhone.errors" class="invalid-feedback">
+            <div *ngIf="f.driverPhone.errors.required">
+              driver Name is required
+            </div>
+     </div>
+        </div>
+      </div>
+     
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-6 rowclass">
+          <label>DL Number</label>
+          <input type="text" formControlName="dlNumber" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.dlNumber.errors }" />
+          <div *ngIf="submitted && f.dlNumber.errors" class="invalid-feedback">
+            <div *ngIf="f.dlNumber.errors.required">
+              DL Number is required
+            </div>
+    
+          </div>
+        </div>
+        <div class="col-sm-6 rowclass">
+          <label>Refral</label>
+          <input type="text" formControlName="refral" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.refral.errors }" />
+          <div *ngIf="submitted && f.refral.errors" class="invalid-feedback">
+            <div *ngIf="f.refral.errors.required">
+              Refral is required
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group form-check">
+      <div class="row">
+        <div class="col-sm-2 rowclass">
+          <input type="checkbox" formControlName="isInsur" class="form-check-input"
+          [ngClass]="{ 'is-invalid': submitted && f.isInsur.errors }" />
+        <label for="isInsur" class="form-check-label">isInsur</label>
+        
+        </div>
+        <div class="col-sm-2 rowclass">
+          <input type="checkbox" formControlName="isPUC" class="form-check-input"
+          [ngClass]="{ 'is-invalid': submitted && f.isPUC.errors }" />
+        <label for="isFastTag" class="form-check-label">isPUC</label>
+        
+        </div>
+        <div class="col-sm-2 rowclass">
+          <input type="checkbox" formControlName="isFastTag" class="form-check-input"
+          [ngClass]="{ 'is-invalid': submitted && f.isFastTag.errors }" />
+        <label for="isFastTag" class="form-check-label">isFastTag</label>
+        <div *ngIf="submitted && f.isFastTag.errors" class="invalid-feedback">
+          FastTag is required
+        </div>
+        </div>
+        <div class="col-sm-6 rowclass ">
+          <label>Insurance Number</label>
+          <input type="text" formControlName="insuranceNumber" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.insuranceNumber.errors }" />
+          <div *ngIf="submitted && f.insuranceNumber.errors" class="invalid-feedback">
+            <div *ngIf="f.refral.errors.required">
+              Insurance Number is required
+            </div>
+    
+          </div>
+        </div>
+      </div>
+     
+    </div>
+
+    <div class="form-group formclass">
+      <button type="submit" class="btn btn-primary btnClass">Register</button>
+      <button type="button" (click)="onReset()" class="btn btn-warning float-right btnClass">
+        Reset
+      </button>
+    </div>
+  </form>
+</div>
